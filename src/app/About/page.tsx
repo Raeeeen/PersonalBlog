@@ -5,7 +5,7 @@ import Image from "next/image";
 import Profile from "@/assets/images/profile.png";
 import Link from "next/link";
 
-export default function page() {
+export default function Page() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
