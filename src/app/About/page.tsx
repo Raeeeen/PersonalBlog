@@ -140,22 +140,23 @@ export default function Page() {
                 {/* About Content */}
                 <div className="space-y-6">
                   <p className="text-lg">
-                    "I am a Computer Science student passionate about learning
-                    and exploring new technologies. I enjoy solving problems,
-                    improving my skills, and diving into web development, mobile
-                    development, AI, and gaming development.
+                    &quot;I am a Computer Science student passionate about
+                    learning and exploring new technologies. I enjoy solving
+                    problems, improving my skills, and diving into web
+                    development, mobile development, AI, and gaming
+                    development.&quot;
                   </p>
                   <p className="text-lg">
-                    I’m always eager to explore emerging areas of technology and
-                    work collaboratively on exciting challenges. My goal is to
-                    continue growing and expanding my expertise in the tech
-                    field.
+                    I&rsquo;m always eager to explore emerging areas of
+                    technology and work collaboratively on exciting challenges.
+                    My goal is to continue growing and expanding my expertise in
+                    the tech field.
                   </p>
                   <p className="text-lg">
                     I thrive in fast-paced environments and am constantly
                     seeking opportunities to push the boundaries of innovation.
                     Through hands-on projects and teamwork, I aim to contribute
-                    to the future of technology."
+                    to the future of technology.&quot;
                   </p>
                 </div>
               </div>
