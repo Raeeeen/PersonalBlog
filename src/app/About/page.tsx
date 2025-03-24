@@ -1,17 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react"; // Add useEffect
 import Image from "next/image";
-import Profile from "@/assets/images/profile.png";
 import Link from "next/link";
 
 export default function Page() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true); // Set default to true
 
+  // Initialize dark mode from localStorage
+  useEffect(() => {
+    const savedDarkMode = localStorage.getItem("darkMode") === "true";
+    setIsDarkMode(savedDarkMode);
+    document.documentElement.classList.toggle("dark", savedDarkMode);
+  }, []);
+
+  // Toggle dark mode and save to localStorage
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle("dark");
+    const newDarkMode = !isDarkMode;
+    setIsDarkMode(newDarkMode);
+    document.documentElement.classList.toggle("dark", newDarkMode);
+    localStorage.setItem("darkMode", newDarkMode.toString());
   };
 
   return (
@@ -70,9 +79,6 @@ export default function Page() {
                   <Link href="#" className="hover:underline">
                     About
                   </Link>
-                  <Link href="/Archive" className="hover:underline">
-                    Archive
-                  </Link>
                   <Link href="/Contact" className="hover:underline">
                     Contact
                   </Link>
@@ -109,9 +115,6 @@ export default function Page() {
                 <Link href="#" className="hover:underline">
                   About
                 </Link>
-                <Link href="/Archive" className="hover:underline">
-                  Archive
-                </Link>
                 <Link href="/Contact" className="hover:underline">
                   Contact
                 </Link>
@@ -130,7 +133,7 @@ export default function Page() {
                 {/* Profile Image */}
                 <div className="relative h-64 md:h-96">
                   <Image
-                    src={Profile}
+                    src="/assets/images/profile.png"
                     alt="Profile Picture"
                     fill
                     className="object-contain rounded-lg"

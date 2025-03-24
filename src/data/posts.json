@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "slug": "modifying-our-thesis",
+    "title": "Enhancing Our Thesis Paper",
+    "excerpt": "Learn how I went from refining my thesis to seeking expert feedback from my dean...",
+    "date": "January 3, 2025",
+    "category": "Editing & Proofreading",
+    "image": "/assets/images/thesisfront.jpg",
+    "content": "We went to our dean to have our thesis paper checked for possible errors and improvements. After carefully reviewing our work, they provided constructive feedback on areas that needed refinement. The dean pointed out sections that lacked clarity and suggested ways to enhance the overall flow of the paper. With their guidance, we are now able to make the necessary revisions to strengthen our thesis and meet the required standards."
+  },
+  {
+    "id": 2,
+    "slug": "signing-bookbind",
+    "title": "Signing and Bookbinding",
+    "excerpt": "The steps I took to finalize, sign, and bind my thesis for submission...",
+    "date": "January 6, 2025",
+    "category": "Bookbind",
+    "image": "/assets/images/thesisfront2.jpg",
+    "content": "We went to our dean for the finalization and signing of our thesis paper. Afterward, we visited the shop recommended by our dean for bookbinding, ensuring our thesis was professionally bound. The shop provided high-quality binding services, preserving our work in a durable and presentable form. This step added a polished touch to our completed thesis, making it ready for submission."
+  },
+  {
+    "id": 3,
+    "slug": "looking-for-ojt",
+    "title": "Looking For OJT/Internship",
+    "excerpt": "The steps I took to apply for OJT opportunities in Cebu while waiting for responses...",
+    "date": "January 13, 2025",
+    "category": "Internship",
+    "image": "/assets/images/thesisfront2.jpg",
+    "content": "After deciding to do our OJT in Cebu, my friend and I began looking for internship opportunities in the area. We submitted our applications to a few companies and are eagerly awaiting their replies. At the same time, we also applied for internships in Iligan, hoping to have backup options. While waiting for feedback, we're preparing ourselves for the next steps in our journey, excited about the potential experiences and learning opportunities that lie ahead."
+  }
+]
