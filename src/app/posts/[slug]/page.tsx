@@ -1,17 +1,36 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { notFound } from "next/navigation";
 import posts from "@/data/posts.json";
 import { Metadata } from "next";
 import Image from "next/image";
 
+// Define the exact Post type matching your JSON structure
+interface Post {
+  id: number;
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  category: string;
+  image: string;
+  content: string;
+}
+
+// Define params type separately
+interface Params {
+  slug: string;
+}
+
+// Use the params type in PageProps
 interface PageProps {
-  params: {
-    slug: string;
-  };
+  params: Params;
 }
 
 export async function generateMetadata({
   params,
-}: PageProps): Promise<Metadata> {
+}: {
+  params: Params;
+}): Promise<Metadata> {
   const post = posts.find((post) => post.slug === params.slug);
   if (!post) return { title: "Post Not Found" };
 
@@ -21,12 +40,19 @@ export async function generateMetadata({
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      images: [post.image],
+      images: [
+        {
+          url: post.image,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
     },
   };
 }
 
-export default function PostPage({ params }: PageProps) {
+export default function PostPage({ params }: { params: Params }) {
   const post = posts.find((post) => post.slug === params.slug);
 
   if (!post) {
