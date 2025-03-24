@@ -1,7 +1,21 @@
 import { notFound } from "next/navigation";
 import posts from "@/data/posts.json"; // Import JSON directly
+import { Metadata } from "next";
 
-export default function PostPage({ params }: { params: { slug: string } }) {
+interface PageProps {
+  params: { slug: string };
+}
+
+// Optional: Set dynamic metadata for SEO
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const post = posts.find((post) => post.slug === params.slug);
+  if (!post) return { title: "Post Not Found" };
+  return { title: post.title };
+}
+
+export default function PostPage({ params }: PageProps) {
   const post = posts.find((post) => post.slug === params.slug);
 
   if (!post) {
