@@ -26,7 +26,97 @@
     "excerpt": "The steps I took to apply for OJT opportunities in Cebu while waiting for responses...",
     "date": "January 13, 2025",
     "category": "Internship",
-    "image": "/assets/images/thesisfront2.jpg",
+    "image": "/assets/images/thesisfront3.jpg",
     "content": "After deciding to do our OJT in Cebu, my friend and I began looking for internship opportunities in the area. We submitted our applications to a few companies and are eagerly awaiting their replies. At the same time, we also applied for internships in Iligan, hoping to have backup options. While waiting for feedback, we're preparing ourselves for the next steps in our journey, excited about the potential experiences and learning opportunities that lie ahead."
+  },
+  {
+    "id": 4,
+    "slug": "ojt-interview",
+    "title": "Internship Interview",
+    "excerpt": "My experience during an OJT interview, discussing my past projects I applied for...",
+    "date": "February 3, 2025",
+    "category": "Internship",
+    "image": "/assets/images/thesisfront4.png",
+    "content": "I finally got an interview for an internship! During the interview, the interviewer asked me about my past experiences, including the projects I’ve worked on and the skills I’ve developed. They also inquired about the position I was applying for and how my background aligns with the role. It was a great opportunity to reflect on my journey and share my passion for learning and technology. Now, I’m looking forward to the next steps and hoping for positive news!"
+  },
+  {
+    "id": 5,
+    "slug": "first-task",
+    "title": "First Task",
+    "excerpt": "My first task as an intern: studying the company's tech stack...",
+    "date": "February 4, 2025",
+    "category": "Internship",
+    "image": "/assets/images/first_task.avif",
+    "content": "After successfully passing the interview, I officially started my internship. My first task was to study the company's tech stack, which took place from February 4 to 5. During this period, I learned that the company uses Nuxt.js for the frontend, while the backend is built with Laravel, MinIO, and PHP. It was an insightful experience, helping me understand how their technology is structured and how different components interact. I'm excited to dive deeper and start working on real tasks soon!"
+  },
+  {
+    "id": 6,
+    "slug": "second_task",
+    "title": "Second Task",
+    "excerpt": "Setting up my local environment and getting familiar with the company's workflow...",
+    "date": "February 6, 2025",
+    "category": "Internship",
+    "image": "/assets/images/second_task.jpg",
+    "content": "After completing my initial study of the company's tech stack, my second task was to set up my local development environment. The company uses Jira for task management and Bitbucket for version control. To get started, I copied the repository from Bitbucket and cloned it onto my computer. This process helped me get familiar with the project's structure and ensure everything was properly set up for development. I worked on this setup for two days, from February 6 to 7, making sure everything was configured correctly. I'm now ready to start contributing and tackling my next tasks!"
+  },
+  {
+    "id": 7,
+    "slug": "third_task",
+    "title": "Third Task",
+    "excerpt": "Fixing unnecessary decimal points in the grading system values...",
+    "date": "February 7, 2025",
+    "category": "Internship",
+    "image": "/assets/images/third_task.jpg",
+    "content": "For my third task, I was assigned to fix an issue in our company’s system where grading values had unnecessary decimal points, such as displaying '65.00' instead of '65'. The project manager asked me to remove these extra decimal places to improve the readability of the grading system. I worked on this decimal change from February 7 to 14, ensuring that all displayed values followed the correct format. Throughout these days, I analyzed the codebase, identified where the decimal formatting occurred, and applied the necessary changes. This task helped me understand more about data formatting and how minor changes can enhance user experience."
+  },
+  {
+    "id": 8,
+    "slug": "fourth_task",
+    "title": "Fourth Task",
+    "excerpt": "Updating the quiz builder's settings panel and publish button...",
+    "date": "February 17, 2025",
+    "category": "Internship",
+    "image": "/assets/images/fourth_task.jpg",
+    "content": "For my fourth task, our project manager assigned all interns to update an old feature of the company system—the quiz builder. I was specifically assigned to work on the settings panel and the publish button. This involved analyzing the existing implementation, making necessary improvements, and ensuring that everything functioned smoothly. I worked on this task from February 17 to 25, focusing on optimizing the user experience and fixing any existing issues. It was a great opportunity to contribute to an important feature while enhancing my skills in working with legacy code and feature updates."
+  },
+  {
+    "id": 9,
+    "slug": "fifth_task",
+    "title": "Fifth Task",
+    "excerpt": "Hotfixing a text box placeholder as soon as possible issue in SkoolTek...",
+    "date": "February 26, 2025",
+    "category": "Internship",
+    "image": "/assets/images/fifth_task.avif",
+    "content": "For my fifth task, our project manager assigned me a hotfix that needed to be resolved as soon as possible. The issue was related to the placeholder text of a text box in our company system, SkoolTek. I quickly analyzed the problem, identified the affected component, and implemented the necessary changes. I worked on this fix from February 26 to 28, ensuring that the placeholder displayed the correct text and improved usability. This task taught me the importance of handling urgent fixes efficiently while maintaining code quality."
+  },
+  {
+    "id": 10,
+    "slug": "sixth_task",
+    "title": "Sixth Task",
+    "excerpt": "Enhancing the company's main website with improvements and updates...",
+    "date": "March 7, 2025",
+    "category": "Internship",
+    "image": "/assets/images/six_task.avif",
+    "content": "After completing the urgent task in our company system, our project manager assigned me to work on enhancements for our company’s main website. This task included 7 subtasks, such as adjusting the mobile responsiveness, making corrections, updating the site to the latest version, and migrating it to a .com domain. I worked on these improvements from March 7 to 12, ensuring that the website performed optimally and provided a better user experience. This task helped me strengthen my skills in web development, responsiveness, and website migration."
+  },
+  {
+    "id": 11,
+    "slug": "seventh_task",
+    "title": "Seventh Task",
+    "excerpt": "Implementing email services and additional enhancements for the main website...",
+    "date": "March 14, 2025",
+    "category": "Internship",
+    "image": "/assets/images/seventh_task.avif",
+    "content": "I am still working on the main website enhancements when our project manager assigned me three additional subtasks. One of the major tasks was to add working email services to the website. These three new subtasks were probably the hardest for me since I had no prior experience with email services. I had to research, troubleshoot, and learn along the way to complete them. It took me five days, from March 14 to 19, to finish these tasks. Despite the challenges, I gained valuable knowledge about email service integration and improved my problem-solving skills."
+  },
+  {
+    "id": 12,
+    "slug": "eighth_task",
+    "title": "Eighth Task",
+    "excerpt": "Adding meta data, Google Tag, and making corrections to the About page...",
+    "date": "March 20, 2025",
+    "category": "Internship",
+    "image": "/assets/images/eight_task.jpg",
+    "content": "I am still working on enhancing the main website, and for this task, our project manager assigned me an easy subtask. I was tasked with adding meta data, integrating Google Tag, and making small corrections on the About page. This task was straightforward and took me only two days to complete, from March 20 to 21. Despite being a simple task, it was important for improving the website’s SEO and analytics tracking."
   }
 ]

@@ -1,15 +1,42 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import posts from "@/data/posts.json";
 import { useDarkMode } from "@/hooks/useDarkMode";
+import PostModal from "@/app/components/PostModal";
 
-export default function Page() {
+// Function to group posts by month and sort them
+const groupPostsByMonth = (posts: any[]) => {
+  const grouped: { [key: string]: any[] } = {};
+
+  posts.forEach((post) => {
+    const date = new Date(post.date);
+    const monthYear = date.toLocaleString("default", { month: "long", year: "numeric" });
+
+    if (!grouped[monthYear]) {
+      grouped[monthYear] = [];
+    }
+    grouped[monthYear].push(post);
+  });
+
+  return Object.entries(grouped).sort((a, b) => {
+    const dateA = new Date(a[0]);
+    const dateB = new Date(b[0]);
+    return dateA.getTime() - dateB.getTime(); // Reverse order to make January appear first
+  });
+};
+
+export default function Archive() {
+  const [selectedPost, setSelectedPost] = useState(null);
   const { isDarkMode, toggleDarkMode, isMounted } = useDarkMode();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   if (!isMounted) return null;
+
+  const sortedPosts = groupPostsByMonth(posts);
 
   return (
     <div className={`min-h-screen flex flex-col ${isDarkMode ? "dark" : ""}`}>
@@ -62,13 +89,13 @@ export default function Page() {
                   <Link href="/" className="hover:underline">
                     Home
                   </Link>
-                  <Link href="#" className="hover:underline">
+                  <Link href="/About" className="hover:underline">
                     About
                   </Link>
                   <Link href="/Contact" className="hover:underline">
                     Contact
                   </Link>
-                  <Link href="/Archive" className="hover:underline">
+                  <Link href="#" className="hover:underline">
                     Archive
                   </Link>
                 </div>
@@ -110,90 +137,46 @@ export default function Page() {
           </nav>
         </header>
 
-        {/* Main Content */}
         <main className="flex-grow">
-          <section className="border-b border-black dark:border-white">
-            <div className="max-w-4xl mx-auto px-4 py-16">
-              <h2 className="text-4xl font-bold mb-8">About Me</h2>
-
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="relative h-64 md:h-96">
-                  <Image
-                    src="/assets/images/profile.png"
-                    alt="Profile Picture"
-                    fill
-                    className="object-contain rounded-lg"
-                  />
-                </div>
-
-                <div className="space-y-6">
-                  <p className="text-lg">
-                    &quot;I am a Computer Science student passionate about
-                    learning and exploring new technologies. I enjoy solving
-                    problems, improving my skills, and diving into web
-                    development, mobile development, AI, and gaming
-                    development.&quot;
-                  </p>
-                  <p className="text-lg">
-                    I&rsquo;m always eager to explore emerging areas of
-                    technology and work collaboratively on exciting challenges.
-                    My goal is to continue growing and expanding my expertise in
-                    the tech field.
-                  </p>
-                  <p className="text-lg">
-                    I thrive in fast-paced environments and am constantly
-                    seeking opportunities to push the boundaries of innovation.
-                    Through hands-on projects and teamwork, I aim to contribute
-                    to the future of technology.&quot;
-                  </p>
+          <section className="max-w-4xl mx-auto px-4 py-16">
+            {sortedPosts.map(([month, posts]) => (
+              <div key={month} className="mb-12">
+                <h2 className="text-2xl font-bold mb-4">{month}</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {posts.map((post) => (
+                    <article key={post.id} className="hover:shadow-lg transition-shadow duration-200 bg-white dark:bg-gray-900">
+                      <div className="relative">
+                        <Image src={post.image} alt={post.title} width={400} height={250} className="w-full h-48 object-cover" />
+                      </div>
+                      <div className="p-4">
+                        <span className="text-sm border border-black dark:border-white px-2 py-1 rounded-full">{post.category}</span>
+                        <h3 className="text-xl font-bold mt-3 mb-2">{post.title}</h3>
+                        <p className="text-gray-600 dark:text-gray-400 mb-3">{post.excerpt}</p>
+                        <div className="flex justify-between items-center text-sm">
+                          <time>{post.date}</time>
+                          <button className="hover:underline" onClick={() => setSelectedPost(post)}>Read More →</button>
+                        </div>
+                      </div>
+                    </article>
+                  ))}
                 </div>
               </div>
-
-              <div className="mt-12">
-                <h3 className="text-2xl font-bold mb-6">Skills & Expertise</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="p-4 border border-black dark:border-white rounded-lg">
-                    <h4 className="font-semibold">Web Development</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      React, Next.js, Node.js
-                    </p>
-                  </div>
-                  <div className="p-4 border border-black dark:border-white rounded-lg">
-                    <h4 className="font-semibold">Mobile Development</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      React Native, Android Studio
-                    </p>
-                  </div>
-                  <div className="p-4 border border-black dark:border-white rounded-lg">
-                    <h4 className="font-semibold">Game Development</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      Unity
-                    </p>
-                  </div>
-                  <div className="p-4 border border-black dark:border-white rounded-lg">
-                    <h4 className="font-semibold">DB Management</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      PostgreSQL, MySQL, Firebase
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </section>
         </main>
 
-        {/* Footer */}
         <footer className="border-t border-black dark:border-white">
           <div className="max-w-4xl mx-auto px-4 py-8 text-center">
             <p>© 2025 Rodriguez Blog. All rights reserved.</p>
             <div className="mt-2">
-              <a href="#" className="hover:underline">
-                Back to Top
-              </a>
+              <a href="#" className="hover:underline">Back to Top</a>
             </div>
           </div>
         </footer>
       </div>
+
+      {/* Post Modal */}
+      {selectedPost && <PostModal selectedPost={selectedPost} closeModal={() => setSelectedPost(null)} />}
     </div>
   );
 }

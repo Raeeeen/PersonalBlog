@@ -1,12 +1,11 @@
-// src/app/posts/[slug]/page.tsx
 import { notFound } from "next/navigation";
-import posts from "@/data/posts.json";
+import posts from "@/data/posts.json"; // Import JSON directly
 
 export default function PostPage({ params }: { params: { slug: string } }) {
   const post = posts.find((post) => post.slug === params.slug);
 
   if (!post) {
-    notFound();
+    return notFound();
   }
 
   return (

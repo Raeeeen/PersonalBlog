@@ -1,11 +1,19 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { useDarkMode } from "@/hooks/useDarkMode";
+import { 
+  EnvelopeIcon,
+  PhoneIcon,
+  CodeBracketIcon,
+  BriefcaseIcon,
+  CameraIcon
+} from "@heroicons/react/24/outline";
+import Image from "next/image";
 
-export default function Page() {
+export default function Contact() {
   const { isDarkMode, toggleDarkMode, isMounted } = useDarkMode();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -62,7 +70,7 @@ export default function Page() {
                   <Link href="/" className="hover:underline">
                     Home
                   </Link>
-                  <Link href="#" className="hover:underline">
+                  <Link href="/About" className="hover:underline">
                     About
                   </Link>
                   <Link href="/Contact" className="hover:underline">
@@ -99,7 +107,7 @@ export default function Page() {
                 <Link href="/" className="hover:underline">
                   Home
                 </Link>
-                <Link href="#" className="hover:underline">
+                <Link href="/About" className="hover:underline">
                   About
                 </Link>
                 <Link href="/Contact" className="hover:underline">
@@ -111,76 +119,93 @@ export default function Page() {
         </header>
 
         {/* Main Content */}
-        <main className="flex-grow">
-          <section className="border-b border-black dark:border-white">
-            <div className="max-w-4xl mx-auto px-4 py-16">
-              <h2 className="text-4xl font-bold mb-8">About Me</h2>
+<main className="flex-grow">
+  <section className="border-b border-black dark:border-white">
+    <div className="max-w-4xl mx-auto px-4 py-16">
+      <h2 className="text-4xl font-bold mb-8">Contact Me</h2>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="relative h-64 md:h-96">
-                  <Image
-                    src="/assets/images/profile.png"
-                    alt="Profile Picture"
-                    fill
-                    className="object-contain rounded-lg"
-                  />
-                </div>
+      <div className="grid md:grid-cols-2 gap-8">
+       <div className="relative aspect-square w-full h-auto min-h-[16rem] md:min-h-[24rem] bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
+          <Image
+            src="/assets/images/contact.jpg"
+            alt="Profile Picture"
+            fill={true}
+            className="object-cover"
+            priority={true}
+          />
+        </div>
 
-                <div className="space-y-6">
-                  <p className="text-lg">
-                    &quot;I am a Computer Science student passionate about
-                    learning and exploring new technologies. I enjoy solving
-                    problems, improving my skills, and diving into web
-                    development, mobile development, AI, and gaming
-                    development.&quot;
-                  </p>
-                  <p className="text-lg">
-                    I&rsquo;m always eager to explore emerging areas of
-                    technology and work collaboratively on exciting challenges.
-                    My goal is to continue growing and expanding my expertise in
-                    the tech field.
-                  </p>
-                  <p className="text-lg">
-                    I thrive in fast-paced environments and am constantly
-                    seeking opportunities to push the boundaries of innovation.
-                    Through hands-on projects and teamwork, I aim to contribute
-                    to the future of technology.&quot;
-                  </p>
+        <div className="space-y-8">
+          <p className="text-lg">
+            Feel free to reach out through any of these platforms. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+          </p>
+          
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold">Social Media</h3>
+            <div className="grid grid-cols-2 gap-4">
+              <Link 
+                href="https://github.com/Raeeeen" 
+                target="_blank"
+                className="p-4 border border-black dark:border-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              >
+                <div className="flex items-center space-x-2">
+                  <CodeBracketIcon className="h-6 w-6" />
+                  <span>GitHub</span>
                 </div>
-              </div>
-
-              <div className="mt-12">
-                <h3 className="text-2xl font-bold mb-6">Skills & Expertise</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="p-4 border border-black dark:border-white rounded-lg">
-                    <h4 className="font-semibold">Web Development</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      React, Next.js, Node.js
-                    </p>
-                  </div>
-                  <div className="p-4 border border-black dark:border-white rounded-lg">
-                    <h4 className="font-semibold">Mobile Development</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      React Native, Android Studio
-                    </p>
-                  </div>
-                  <div className="p-4 border border-black dark:border-white rounded-lg">
-                    <h4 className="font-semibold">Game Development</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      Unity
-                    </p>
-                  </div>
-                  <div className="p-4 border border-black dark:border-white rounded-lg">
-                    <h4 className="font-semibold">DB Management</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      PostgreSQL, MySQL, Firebase
-                    </p>
-                  </div>
+              </Link>
+              <Link 
+                href="https://linkedin.com/in/rafael-enrique-rodriguez-747422192" 
+                target="_blank"
+                className="p-4 border border-black dark:border-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              >
+                <div className="flex items-center space-x-2">
+                  <BriefcaseIcon className="h-6 w-6" />
+                  <span>LinkedIn</span>
                 </div>
-              </div>
+              </Link>
+              <Link 
+                href="https://twitter.com/Raeeeen" 
+                target="_blank"
+                className="p-4 border border-black dark:border-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              >
+                <div className="flex items-center space-x-2">
+                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                  </svg>
+                  <span>Twitter</span>
+                </div>
+              </Link>
+              <Link 
+                href="https://instagram.com/rae_eeen" 
+                target="_blank"
+                className="p-4 border border-black dark:border-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              >
+                <div className="flex items-center space-x-2">
+                  <CameraIcon className="h-6 w-6" />
+                  <span>Instagram</span>
+                </div>
+              </Link>
             </div>
-          </section>
-        </main>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold">Direct Contact</h3>
+            <div className="space-y-2">
+              <p className="flex items-center space-x-2">
+                <EnvelopeIcon className="h-5 w-5" />
+                <span>rodriguezrafaelenrique00@gmail.com</span>
+              </p>
+              <p className="flex items-center space-x-2">
+                <PhoneIcon className="h-5 w-5" />
+                <span>+639089430328</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
         {/* Footer */}
         <footer className="border-t border-black dark:border-white">
