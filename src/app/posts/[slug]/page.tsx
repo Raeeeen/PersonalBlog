@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+export const dynamic = "auto";
+
 import { notFound } from "next/navigation";
 import posts from "@/data/posts.json";
 import { Metadata } from "next";
 import Image from "next/image";
 
-// Define the exact Post type matching your JSON structure
 interface Post {
   id: number;
   slug: string;
@@ -16,21 +17,20 @@ interface Post {
   content: string;
 }
 
-// Define params type separately
-interface Params {
-  slug: string;
+// For generateMetadata
+interface MetadataProps {
+  params: { slug: string };
+  searchParams?: { [key: string]: string | string[] | undefined };
 }
 
-// Use the params type in PageProps
-interface PageProps {
-  params: Params;
+// For page component (simplest possible type)
+interface PageParams {
+  params: { slug: string };
 }
 
 export async function generateMetadata({
   params,
-}: {
-  params: Params;
-}): Promise<Metadata> {
+}: MetadataProps): Promise<Metadata> {
   const post = posts.find((post) => post.slug === params.slug);
   if (!post) return { title: "Post Not Found" };
 
@@ -52,7 +52,7 @@ export async function generateMetadata({
   };
 }
 
-export default function PostPage({ params }: { params: Params }) {
+export default function PostPage({ params }: { params: { slug: string } }) {
   const post = posts.find((post) => post.slug === params.slug);
 
   if (!post) {
@@ -79,6 +79,7 @@ export default function PostPage({ params }: { params: Params }) {
             fill
             className="object-cover rounded-lg"
             priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
           />
         </div>
 
