@@ -265,12 +265,12 @@ export default function Home() {
               >
                 <div className="flex items-center space-x-8 pl-[calc(50%-24rem)] pr-[calc(50%-24rem)]">
                   {posts.map((post, index) => {
-                    const isCenter = index === currentCenterIndex;
+                    const isCenter = index === currentCenterIndex
                     return (
                       <article
                         key={post.id}
                         ref={(el) => {
-                          if (el) cardRefs.current[index] = el;
+                          if (el) cardRefs.current[index] = el
                         }}
                         className={`flex-shrink-0 w-80 transform transition-all duration-300 snap-center ${
                           isCenter
@@ -278,9 +278,9 @@ export default function Home() {
                             : "scale-90 opacity-80 grayscale-[20%] hover:scale-95" // Non-selected reduced (90%)
                         }`}
                         onClick={() => {
-                          setCurrentCenterIndex(index);
-                          scrollToCenter(index);
-                          openModal(post);
+                          setCurrentCenterIndex(index)
+                          scrollToCenter(index)
+                          openModal(post)
                         }}
                       >
                         <div
@@ -322,7 +322,7 @@ export default function Home() {
                           </div>
                         </div>
                       </article>
-                    );
+                    )
                   })}
                 </div>
               </div>
@@ -385,8 +385,8 @@ export default function Home() {
                       height={300}
                       className="w-full h-auto rounded-lg transition-all duration-300"
                       onClick={() => {
-                        setEnlargedImage("/assets/images/thesispic1.jpg");
-                        setIsImageEnlarged(true);
+                        setEnlargedImage("/assets/images/thesispic1.jpg")
+                        setIsImageEnlarged(true)
                       }}
                     />
                   </div>
@@ -414,8 +414,8 @@ export default function Home() {
                       height={300}
                       className="w-full h-auto rounded-lg transition-all duration-300"
                       onClick={() => {
-                        setEnlargedImage("/assets/images/thesispic2.jpg");
-                        setIsImageEnlarged(true);
+                        setEnlargedImage("/assets/images/thesispic2.jpg")
+                        setIsImageEnlarged(true)
                       }}
                     />
                   </div>
@@ -443,8 +443,8 @@ export default function Home() {
                       height={300} // Normal size
                       className="w-full h-auto rounded-lg transition-all duration-300"
                       onClick={() => {
-                        setEnlargedImage("/assets/images/lookingforojt.png");
-                        setIsImageEnlarged(true);
+                        setEnlargedImage("/assets/images/lookingforojt.png")
+                        setIsImageEnlarged(true)
                       }}
                     />
                   </div>
@@ -472,8 +472,8 @@ export default function Home() {
                       height={300}
                       className="w-full h-auto rounded-lg transition-all duration-300"
                       onClick={() => {
-                        setEnlargedImage("/assets/images/ojtinterview.jpg");
-                        setIsImageEnlarged(true);
+                        setEnlargedImage("/assets/images/ojtinterview.jpg")
+                        setIsImageEnlarged(true)
                       }}
                     />
                   </div>
@@ -501,8 +501,8 @@ export default function Home() {
                       height={300}
                       className="w-full h-auto rounded-lg transition-all duration-300"
                       onClick={() => {
-                        setEnlargedImage("/assets/images/first_task_1.jpg");
-                        setIsImageEnlarged(true);
+                        setEnlargedImage("/assets/images/first_task_1.jpg")
+                        setIsImageEnlarged(true)
                       }}
                     />
                   </div>
@@ -530,8 +530,8 @@ export default function Home() {
                       height={300}
                       className="w-full h-auto rounded-lg transition-all duration-300"
                       onClick={() => {
-                        setEnlargedImage("/assets/images/second_task_2.png");
-                        setIsImageEnlarged(true);
+                        setEnlargedImage("/assets/images/second_task_2.png")
+                        setIsImageEnlarged(true)
                       }}
                     />
                   </div>
@@ -559,8 +559,8 @@ export default function Home() {
                       height={300}
                       className="w-full h-auto rounded-lg transition-all duration-300"
                       onClick={() => {
-                        setEnlargedImage("/assets/images/third_task_3.png");
-                        setIsImageEnlarged(true);
+                        setEnlargedImage("/assets/images/third_task_3.png")
+                        setIsImageEnlarged(true)
                       }}
                     />
                   </div>
@@ -588,8 +588,8 @@ export default function Home() {
                       height={300}
                       className="w-full h-auto rounded-lg transition-all duration-300"
                       onClick={() => {
-                        setEnlargedImage("/assets/images/fourth_task_4.png");
-                        setIsImageEnlarged(true);
+                        setEnlargedImage("/assets/images/fourth_task_4.png")
+                        setIsImageEnlarged(true)
                       }}
                     />
                   </div>
@@ -617,8 +617,8 @@ export default function Home() {
                       height={300}
                       className="w-full h-auto rounded-lg transition-all duration-300"
                       onClick={() => {
-                        setEnlargedImage("/assets/images/fifth_task_5.png");
-                        setIsImageEnlarged(true);
+                        setEnlargedImage("/assets/images/fifth_task_5.png")
+                        setIsImageEnlarged(true)
                       }}
                     />
                   </div>
@@ -646,8 +646,8 @@ export default function Home() {
                       height={300}
                       className="w-full h-auto rounded-lg transition-all duration-300"
                       onClick={() => {
-                        setEnlargedImage("/assets/images/six_task_6.png");
-                        setIsImageEnlarged(true);
+                        setEnlargedImage("/assets/images/six_task_6.png")
+                        setIsImageEnlarged(true)
                       }}
                     />
                   </div>
@@ -675,8 +675,8 @@ export default function Home() {
                       height={300}
                       className="w-full h-auto rounded-lg transition-all duration-300"
                       onClick={() => {
-                        setEnlargedImage("/assets/images/seventh_task_7.png");
-                        setIsImageEnlarged(true);
+                        setEnlargedImage("/assets/images/seventh_task_7.png")
+                        setIsImageEnlarged(true)
                       }}
                     />
                   </div>
@@ -699,13 +699,251 @@ export default function Home() {
                   >
                     <Image
                       src="/assets/images/eight_task_8.png"
-                      alt="Thesis Picture 6"
+                      alt="Thesis Picture 7"
                       width={400}
                       height={300}
                       className="w-full h-auto rounded-lg transition-all duration-300"
                       onClick={() => {
-                        setEnlargedImage("/assets/images/eight_task_8.png");
-                        setIsImageEnlarged(true);
+                        setEnlargedImage("/assets/images/eight_task_8.png")
+                        setIsImageEnlarged(true)
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="flex-1 flex items-center">
+                  <p className="text-gray-600 dark:text-gray-300 text-justify">
+                    {selectedPost.content}
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {selectedPost.id === 13 && (
+              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mb-4">
+                <div className="flex-1 mb-4 sm:mb-0 sm:max-w-[400px] sm:mr-4 flex justify-center">
+                  <div
+                    className={`w-full h-auto rounded-lg cursor-pointer transition-all duration-300 ${
+                      isImageEnlarged ? "opacity-0" : ""
+                    }`}
+                  >
+                    <Image
+                      src="/assets/images/nine_task_9.png"
+                      alt="Thesis Picture 8"
+                      width={400}
+                      height={300}
+                      className="w-full h-auto rounded-lg transition-all duration-300"
+                      onClick={() => {
+                        setEnlargedImage("/assets/images/nine_task_9.png")
+                        setIsImageEnlarged(true)
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="flex-1 flex items-center">
+                  <p className="text-gray-600 dark:text-gray-300 text-justify">
+                    {selectedPost.content}
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {selectedPost.id === 14 && (
+              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mb-4">
+                <div className="flex-1 mb-4 sm:mb-0 sm:max-w-[400px] sm:mr-4 flex justify-center">
+                  <div
+                    className={`w-full h-auto rounded-lg cursor-pointer transition-all duration-300 ${
+                      isImageEnlarged ? "opacity-0" : ""
+                    }`}
+                  >
+                    <Image
+                      src="/assets/images/tenth_task_10.png"
+                      alt="Thesis Picture 9"
+                      width={400}
+                      height={300}
+                      className="w-full h-auto rounded-lg transition-all duration-300"
+                      onClick={() => {
+                        setEnlargedImage("/assets/images/tenth_task_10.png")
+                        setIsImageEnlarged(true)
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="flex-1 flex items-center">
+                  <p className="text-gray-600 dark:text-gray-300 text-justify">
+                    {selectedPost.content}
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {selectedPost.id === 15 && (
+              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mb-4">
+                <div className="flex-1 mb-4 sm:mb-0 sm:max-w-[400px] sm:mr-4 flex justify-center">
+                  <div
+                    className={`w-full h-auto rounded-lg cursor-pointer transition-all duration-300 ${
+                      isImageEnlarged ? "opacity-0" : ""
+                    }`}
+                  >
+                    <Image
+                      src="/assets/images/eleventh_task_11.png"
+                      alt="Thesis Picture 10"
+                      width={400}
+                      height={300}
+                      className="w-full h-auto rounded-lg transition-all duration-300"
+                      onClick={() => {
+                        setEnlargedImage("/assets/images/eleventh_task_11.png")
+                        setIsImageEnlarged(true)
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="flex-1 flex items-center">
+                  <p className="text-gray-600 dark:text-gray-300 text-justify">
+                    {selectedPost.content}
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {selectedPost.id === 16 && (
+              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mb-4">
+                <div className="flex-1 mb-4 sm:mb-0 sm:max-w-[400px] sm:mr-4 flex justify-center">
+                  <div
+                    className={`w-full h-auto rounded-lg cursor-pointer transition-all duration-300 ${
+                      isImageEnlarged ? "opacity-0" : ""
+                    }`}
+                  >
+                    <Image
+                      src="/assets/images/twelveth_task_12.png"
+                      alt="Thesis Picture 11"
+                      width={400}
+                      height={300}
+                      className="w-full h-auto rounded-lg transition-all duration-300"
+                      onClick={() => {
+                        setEnlargedImage("/assets/images/twelveth_task_12.png")
+                        setIsImageEnlarged(true)
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="flex-1 flex items-center">
+                  <p className="text-gray-600 dark:text-gray-300 text-justify">
+                    {selectedPost.content}
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {selectedPost.id === 17 && (
+              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mb-4">
+                <div className="flex-1 mb-4 sm:mb-0 sm:max-w-[400px] sm:mr-4 flex justify-center">
+                  <div
+                    className={`w-full h-auto rounded-lg cursor-pointer transition-all duration-300 ${
+                      isImageEnlarged ? "opacity-0" : ""
+                    }`}
+                  >
+                    <Image
+                      src="/assets/images/thirteenth_task_13.png"
+                      alt="Thesis Picture 11"
+                      width={400}
+                      height={300}
+                      className="w-full h-auto rounded-lg transition-all duration-300"
+                      onClick={() => {
+                        setEnlargedImage(
+                          "/assets/images/thirteenth_task_13.png"
+                        )
+                        setIsImageEnlarged(true)
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="flex-1 flex items-center">
+                  <p className="text-gray-600 dark:text-gray-300 text-justify">
+                    {selectedPost.content}
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {selectedPost.id === 18 && (
+              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mb-4">
+                <div className="flex-1 mb-4 sm:mb-0 sm:max-w-[400px] sm:mr-4 flex justify-center">
+                  <div
+                    className={`w-full h-auto rounded-lg cursor-pointer transition-all duration-300 ${
+                      isImageEnlarged ? "opacity-0" : ""
+                    }`}
+                  >
+                    <Image
+                      src="/assets/images/twelveth_task_12.png"
+                      alt="Thesis Picture 11"
+                      width={400}
+                      height={300}
+                      className="w-full h-auto rounded-lg transition-all duration-300"
+                      onClick={() => {
+                        setEnlargedImage("/assets/images/twelveth_task_12.png")
+                        setIsImageEnlarged(true)
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="flex-1 flex items-center">
+                  <p className="text-gray-600 dark:text-gray-300 text-justify">
+                    {selectedPost.content}
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {selectedPost.id === 19 && (
+              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mb-4">
+                <div className="flex-1 mb-4 sm:mb-0 sm:max-w-[400px] sm:mr-4 flex justify-center">
+                  <div
+                    className={`w-full h-auto rounded-lg cursor-pointer transition-all duration-300 ${
+                      isImageEnlarged ? "opacity-0" : ""
+                    }`}
+                  >
+                    <Image
+                      src="/assets/images/thirteenth_task_13.png"
+                      alt="Thesis Picture 11"
+                      width={400}
+                      height={300}
+                      className="w-full h-auto rounded-lg transition-all duration-300"
+                      onClick={() => {
+                        setEnlargedImage(
+                          "/assets/images/thirteenth_task_13.png"
+                        )
+                        setIsImageEnlarged(true)
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="flex-1 flex items-center">
+                  <p className="text-gray-600 dark:text-gray-300 text-justify">
+                    {selectedPost.content}
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {selectedPost.id === 20 && (
+              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mb-4">
+                <div className="flex-1 mb-4 sm:mb-0 sm:max-w-[400px] sm:mr-4 flex justify-center">
+                  <div
+                    className={`w-full h-auto rounded-lg cursor-pointer transition-all duration-300 ${
+                      isImageEnlarged ? "opacity-0" : ""
+                    }`}
+                  >
+                    <Image
+                      src="/assets/images/checking_clearance.jpg"
+                      alt="Thesis Picture 12"
+                      width={400}
+                      height={300}
+                      className="w-full h-auto rounded-lg transition-all duration-300"
+                      onClick={() => {
+                        setEnlargedImage(
+                          "/assets/images/checking_clearance.jpg"
+                        )
+                        setIsImageEnlarged(true)
                       }}
                     />
                   </div>
@@ -724,15 +962,15 @@ export default function Home() {
             <div
               className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center"
               onClick={() => {
-                setEnlargedImage(null);
-                setIsImageEnlarged(false);
+                setEnlargedImage(null)
+                setIsImageEnlarged(false)
               }}
             >
               <div className="relative">
                 <button
                   onClick={() => {
-                    setEnlargedImage(null);
-                    setIsImageEnlarged(false);
+                    setEnlargedImage(null)
+                    setIsImageEnlarged(false)
                   }}
                   className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                 >
@@ -764,5 +1002,5 @@ export default function Home() {
         </div>
       )}
     </div>
-  );
+  )
 }

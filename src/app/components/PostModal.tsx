@@ -34,7 +34,15 @@ export default function PostModal({ selectedPost, closeModal }: PostModalProps) 
     10: "/assets/images/six_task_6.png",
     11: "/assets/images/seventh_task_7.png",
     12: "/assets/images/eight_task_8.png",
-  };
+    13: "/assets/images/nine_task_9.png",
+    14: "/assets/images/tenth_task_10.png",
+    15: "/assets/images/eleventh_task_11.png",
+    16: "/assets/images/twelveth_task_12.png",
+    17: "/assets/images/thirteenth_task_13.png",
+    18: "/assets/images/twelveth_task_12.png",
+    19: "/assets/images/thirteenth_task_13.png",
+    20: "/assets/images/checking_clearance.jpg",
+  }
 
   const modalImage = imageMap[selectedPost.id] || "/assets/images/default.jpg";
 

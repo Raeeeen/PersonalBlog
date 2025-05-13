@@ -117,6 +117,86 @@
     "date": "March 20, 2025",
     "category": "Internship",
     "image": "/assets/images/eight_task.jpg",
-    "content": "I am still working on enhancing the main website, and for this task, our project manager assigned me an easy subtask. I was tasked with adding meta data, integrating Google Tag, and making small corrections on the About page. This task was straightforward and took me only two days to complete, from March 20 to 21. Despite being a simple task, it was important for improving the website’s SEO and analytics tracking."
+    "content": "I am still working on enhancing the main website, and for this task, our project manager assigned me an easy subtask. I was tasked with adding meta data, integrating Google Tag, and making small corrections on the About page. This task was straightforward and took me only two days to complete, from March 20 to 24. Despite being a simple task, it was important for improving the website’s SEO and analytics tracking."
+  },
+  {
+    "id": 13,
+    "slug": "nine_task",
+    "title": "Ninth Task",
+    "excerpt": "Aligning and updating names in the 'People Behind SkoolTek' section on the main page to improve layout consistency...",
+    "date": "March 25, 2025",
+    "category": "Internship",
+    "image": "/assets/images/nine_task.jpg",
+    "content": "I was assigned to update the People Behind SkoolTek section on the SkoolTek main page. This involved aligning the names properly, making the necessary name changes, and addressing comments from the pull request. The task was simple but important for improving the visual consistency and professionalism of the site. I worked on this from March 25 to 27."
+  },
+  {
+    "id": 14,
+    "slug": "tenth_task",
+    "title": "Tenth Task",
+    "excerpt": "Fixing responsiveness and resolving PR comments in the 'People Behind SkoolTek' section...",
+    "date": "March 28, 2025",
+    "category": "Internship",
+    "image": "/assets/images/tenth_task.jpg",
+    "content": "From March 28 to 31, I worked on improving the responsiveness of the People Behind SkoolTek section on the main page. A new issue was raised regarding misalignment on different screen sizes, so I adjusted the layout to ensure consistent alignment across devices. I also handled the pull request and resolved the comments during the review process. While the task was not complex, it was necessary to maintain a polished and responsive design."
+  },
+  {
+    "id": 15,
+    "slug": "eleventh_task",
+    "title": "Eleventh Task",
+    "excerpt": "Updating the PDS letterhead, resolving issues and testing solutions with a manual check approach...",
+    "date": "April 1, 2025",
+    "category": "Internship",
+    "image": "/assets/images/eleventh_task.jpg",
+    "content": "From April 1 to 10, I worked on updating the letterhead of the PDS School. The task began with a standard update, followed by resolving pull request comments from senior developers. However, a new issue was raised when the updates didn’t reflect properly, prompting me to explore different solutions. I initially implemented an algorithm to automatically detect the school for the correct letterhead, but after testing, I decided to switch to a manual checking method for better reliability. I finalized the changes and submitted a new pull request with the manual approach."
+  },
+  {
+    "id": 16,
+    "slug": "twelveth_task",
+    "title": "Twelveth Task",
+    "excerpt": "Integrating Microsoft Clarity tracking code and researching implementation across multiple pages...",
+    "date": "April 14, 2025",
+    "category": "Internship",
+    "image": "/assets/images/twelveth_task.jpg",
+    "content": "On April 14 and 15, I was tasked with integrating the Microsoft Clarity tracking code into the project. I started by researching the best way to implement it across multiple pages to ensure consistent user behavior tracking. After understanding the requirements, I proceeded with the integration, making sure the tracking code was properly applied and functioning across all relevant parts of the site. This task was straightforward but essential for improving user analytics and insights."
+  },
+  {
+    "id": 17,
+    "slug": "thirteenth_task",
+    "title": "Thirteenth Task",
+    "excerpt": "Added 'SkoolTek' to the Our Products menu and footer to improve navigation, accessibility, and overall user experience...",
+    "date": "April 16, 2025",
+    "category": "Internship",
+    "image": "/assets/images/thirteenth_task.jpg",
+    "content": "On April 16, I was assigned to update the navigation by adding SkoolTek to both the Our Products menu and the footer section of the website. This was a quick task focused on improving site accessibility and visibility of our product. The changes ensure that users can easily find and navigate to the SkoolTek page from multiple entry points."
+  },
+  {
+    "id": 18,
+    "slug": "fourteenth_task",
+    "title": "Fourteenth Task",
+    "excerpt": "Troubleshot Microsoft Clarity integration by switching from the package to manual script after system errors, then finalized and PR’d the changes...",
+    "date": "April 17, 2025",
+    "category": "Internship",
+    "image": "/assets/images/fourteenth_task.jpeg",
+    "content": "From April 17 to 22, I continued working on the integration of Microsoft Clarity tracking. Initially, I followed a senior developer's suggestion to use the official Clarity package for implementation. However, a new issue emerged where the package caused system-wide errors. After investigating the problem, I decided to remove the package and instead manually integrate the Clarity script for more control and stability. I tested the changes thoroughly and submitted a pull request with the updated implementation."
+  },
+  {
+    "id": 19,
+    "slug": "fifteenth_task",
+    "title": "Fifteenth Task",
+    "excerpt": "Finalized and merged the addition of 'SkoolTek' in the Our Products menu and footer to ensure consistent site-wide navigation...",
+    "date": "April 24, 2025",
+    "category": "Internship",
+    "image": "/assets/images/fifteenth_task.jpg",
+    "content": "On April 24, I finalized the update for adding SkoolTek to the Our Products menu and the footer section. After making the initial changes earlier, I created a pull request, addressed any review feedback, and successfully merged the updates into the main branch. This ensured that the SkoolTek link is now live and consistently accessible across the site, improving user navigation. My Last Task of my Internship"
+  },
+  {
+    "id": 20,
+    "slug": "clearance_checking",
+    "title": "Clearance Checking",
+    "excerpt": "Visited my school and coordinated with the dean to start the OJT clearance checking process...",
+    "date": "May 7, 2025",
+    "category": "Clearance",
+    "image": "/assets/images/clearance_checking.jpg",
+    "content": "After completing my on-the-job training (OJT), I visited my school and met with my dean to begin the clearance checking process. This step was necessary to finalize my OJT requirements and ensure all documentation and obligations were properly completed before moving forward."
   }
 ]
